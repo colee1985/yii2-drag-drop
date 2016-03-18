@@ -40,8 +40,8 @@ new Vue({
 usage widget:
 ``` js
 DragTagsWidget::widget([
-    'tags'=>$model->tags,
-    'url'=>Url::to(['save-tags', 'id'=>$model->id]),
-    'change'=>'console.log(itemOne, itemTwo)',
+    'tags'=>$model->tags, //可以是数组或逗号分隔的字符串
+    'url'=>Url::to(['save-tags', 'id'=>$model->id]), //排序修改后将新的数组AJAX提交到目标接口中
+    'change'=>'console.log(itemOne, itemTwo)', // 改变时的事件
 ]);
 ```
