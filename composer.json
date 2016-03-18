@@ -23,7 +23,8 @@
     ],
     "require": {
         "php" : "~5.5|~7.0",
-        "yiisoft/yii2-bootstrap": "@dev"
+        "yiisoft/yii2-bootstrap": "@dev",
+        "colee/vue/VueAsset": "*"
     },
     "autoload": {
         "psr-4": {

@@ -21,7 +21,7 @@ class DragAsset extends AssetBundle
         
     ];
     public $depends = [
-        
+        'colee/vue/VueAsset'
     ];
     public function init()
     {
