@@ -11,7 +11,6 @@ $ composer require colee/yii2-vue-widgets
 
 ### drag-and-drop
 > 拖放组件
-
 Usage  
 ``` php
 DragAsset::register($this);
