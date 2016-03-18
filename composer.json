@@ -1,0 +1,34 @@
+{
+    "name": "colee/yii2-vue-widgets",
+    "type": "library",
+    "description": "Vue.js library for Yii2 framework",
+    "keywords": [
+        "yii2",
+        "colee",
+        "vue",
+        "vuejs",
+        "yii2-vue-widgets",
+        "widget"
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/colee1985/yii2-vue-widgets",
+    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "colee",
+            "email": "5969226@qq.com",
+            "issues": "https://github.com/colee1985/yii2-vue-widgets/issues?state=open",
+        	"source": "https://github.com/colee1985/yii2-vue-widgets"
+        }
+    ],
+    "require": {
+        "php" : "~5.5|~7.0",
+        "yiisoft/yii2-bootstrap": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "colee\\vue\\": ""
+        }
+    }
+}
+
