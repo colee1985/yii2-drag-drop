@@ -23,9 +23,15 @@ new Vue({
 	el: '#test',
 	data: {
 		tasks: []
+	},
+	methods: function(draggedElement, dropppedOnElement){
+		var placeholder = this.tasks[draggedElement.id];
+		// 插入方式
+		this.tasks.splice(draggedElement.id, 1);
+		this.tasks.splice(dropppedOnElement.id, 0, placeholder);
+		// 或交换位置方式
+		this.tasks.$set(draggedElement.id, this.tasks[dropppedOnElement.id]);
+		this.tasks.$set(dropppedOnElement.id, placeholder);
 	}
 });
-var placeholder = this.tasks[draggedElement.id];
-this.tasks.$set(draggedElement.id, this.tasks[dropppedOnElement.id]);
-this.tasks.$set(dropppedOnElement.id, placeholder);
 ```
