@@ -11,12 +11,22 @@ $ composer require colee/yii2-vue-widgets
 
 ### drag-and-drop
 > 拖放组件  
-Usage  
+简单用法:
+``` js
+DragTagsWidget::widget([
+    'tags'=>$model->tags, //可以是数组或逗号分隔的字符串
+    'url'=>Url::to(['save-tags', 'id'=>$model->id]), //排序修改后将新的数组AJAX提交到目标接口中
+    'change'=>'console.log(itemOne, itemTwo)', // 改变时的事件
+]);
+```
+自定义使用  
 ``` php
 DragAsset::register($this);
 ```
 ``` html
-<li v-for="task in tasks" id="{{ $index }}" v-drag-and-drop drop="handleDrop">{{ task.title }}</li>
+<ul id="test">
+	<li v-for="task in tasks" id="{{ $index }}" v-drag-and-drop drop="handleDrop">{{ task.title }}</li>
+</ul>
 ```
 ``` js
 new Vue({
@@ -36,12 +46,4 @@ new Vue({
 		}
 	}
 });
-```
-usage widget:
-``` js
-DragTagsWidget::widget([
-    'tags'=>$model->tags, //可以是数组或逗号分隔的字符串
-    'url'=>Url::to(['save-tags', 'id'=>$model->id]), //排序修改后将新的数组AJAX提交到目标接口中
-    'change'=>'console.log(itemOne, itemTwo)', // 改变时的事件
-]);
 ```
