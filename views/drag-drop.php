@@ -14,7 +14,7 @@ use colee\vue\DragAsset;
 DragAsset::register($this);
 
 $tags = json_encode($tags);
-$id = 'drag'.microtime().rand(10, 99);
+$id = uniqid('drag');
 $change .= ';';
 if (!empty($url)){
     $change .= "
