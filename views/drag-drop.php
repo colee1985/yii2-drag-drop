@@ -20,7 +20,7 @@ if (!empty($url)){
     $change .= "
     $.ajax({
        url: '$url',
-       method: 'get',
+       method: 'post',
        data: {tags: this.tags}
    });";
 }
